@@ -1,0 +1,74 @@
+LOG:  database system was shut down at 2016-04-30 17:49:13 EEST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (1, admin, $2a$10$HxxlGsRUygHP4JNA6yedSOgBbAxwzj.28tgqgjmOOwQOMgUNEqirq, {"modules": [{"name": "users"}, {"name": "expenses"}, {"name": "..., 2016-05-01 17:21:23.540296, null).
+STATEMENT:  insert into users (username,password,data) values ('admin','$2a$10$HxxlGsRUygHP4JNA6yedSOgBbAxwzj.28tgqgjmOOwQOMgUNEqirq','{"modules":[{"name":"users"},{"name":"expenses"},{"name":"links"},{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (2, admin2, $2a$10$4xq9g6w8TQgGwrRqZOHrmO6aUWmddLpRJqOKqiNAYS4AH7yZLqAbm, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:23.540615, null).
+STATEMENT:  insert into users (username,password,data) values ('admin2','$2a$10$4xq9g6w8TQgGwrRqZOHrmO6aUWmddLpRJqOKqiNAYS4AH7yZLqAbm','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (3, test, $2a$10$JVwJe6dM5ZJd.GAt6gcA9u4maNcaq/xG.i4DyHx84Uxw5mkaCmBfm, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:23.555934, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$JVwJe6dM5ZJd.GAt6gcA9u4maNcaq/xG.i4DyHx84Uxw5mkaCmBfm','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (4, test, $2a$10$.PluzudZPTg4ecZc5v0KPO.mBnfJ95BIB0rSUHNO0z.3l82bQbfJ2, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:23.660413, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$.PluzudZPTg4ecZc5v0KPO.mBnfJ95BIB0rSUHNO0z.3l82bQbfJ2','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (5, test, $2a$10$ivPj83OaOSArKztsMf6LaeRlAFfO.Y1R8Ab1i7.a8O7DVqGeMqPzO, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:23.745261, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$ivPj83OaOSArKztsMf6LaeRlAFfO.Y1R8Ab1i7.a8O7DVqGeMqPzO','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (6, test, $2a$10$/H.SporFGMKXGPmWI5NmrurPKxas9GhmPTAwq2eX4QBcTfNdykqHy, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:23.847691, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$/H.SporFGMKXGPmWI5NmrurPKxas9GhmPTAwq2eX4QBcTfNdykqHy','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (1, admin2, $2a$10$z.p4YJ6pm7MkZg/aDKQfyOiD1LCOrk2WhrQlLyqXYZuo0lbZtilpS, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:55.911194, null).
+STATEMENT:  insert into users (username,password,data) values ('admin2','$2a$10$z.p4YJ6pm7MkZg/aDKQfyOiD1LCOrk2WhrQlLyqXYZuo0lbZtilpS','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (2, admin, $2a$10$fhBEiO1Yb40iRYCzRu30seJ5Fcbt5AjDkzlM1C9igD5mX9uKIwzgK, {"modules": [{"name": "users"}, {"name": "expenses"}, {"name": "..., 2016-05-01 17:21:55.911468, null).
+STATEMENT:  insert into users (username,password,data) values ('admin','$2a$10$fhBEiO1Yb40iRYCzRu30seJ5Fcbt5AjDkzlM1C9igD5mX9uKIwzgK','{"modules":[{"name":"users"},{"name":"expenses"},{"name":"links"},{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (3, test, $2a$10$b/mwYVKr9/xia8VsHQeZkecs.5XR3zqCdAuHaAfkYRktLEu.s6INq, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:55.92264, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$b/mwYVKr9/xia8VsHQeZkecs.5XR3zqCdAuHaAfkYRktLEu.s6INq','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (4, test, $2a$10$/izH4r/kti1IhTPLxORtZOWWeukojM2vvdYsD6HT33H0BPRrnhQxK, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:56.025928, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$/izH4r/kti1IhTPLxORtZOWWeukojM2vvdYsD6HT33H0BPRrnhQxK','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (5, test, $2a$10$yrkjmVcYbt5In1cuZQMEruDktanZSpCMVYH5VlEfEFqpXn51MsGMC, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:56.116756, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$yrkjmVcYbt5In1cuZQMEruDktanZSpCMVYH5VlEfEFqpXn51MsGMC','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (6, test, $2a$10$38d6AdURoGwvpqVucs6l/O2flf2ct0oPC2Ki5qNtMJFHpD3clQY36, {"modules": [{"name": "aws"}]}, 2016-05-01 17:21:56.217501, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$38d6AdURoGwvpqVucs6l/O2flf2ct0oPC2Ki5qNtMJFHpD3clQY36','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (1, test, $2a$10$75vKDVZBrcwcOs1nPMXlgODWM6nW2PCrX4w0ffMb/R51J4Uu8fbxu, {"modules": [{"name": "aws"}]}, 2016-05-01 17:22:43.077333, null).
+STATEMENT:  insert into users (username,password,data) values ('test','$2a$10$75vKDVZBrcwcOs1nPMXlgODWM6nW2PCrX4w0ffMb/R51J4Uu8fbxu','{"modules":[{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (2, admin, $2a$10$vtnEtk9jlpCxCDmbGbIxUupT8Zvc3DW3diatzNWSropg2t6kYWcZe, {"modules": [{"name": "users"}, {"name": "expenses"}, {"name": "..., 2016-05-01 17:22:43.112901, null).
+STATEMENT:  insert into users (username,password,data) values ('admin','$2a$10$vtnEtk9jlpCxCDmbGbIxUupT8Zvc3DW3diatzNWSropg2t6kYWcZe','{"modules":[{"name":"users"},{"name":"expenses"},{"name":"links"},{"name":"aws"}]}')
+ERROR:  null value in column "last_login" violates not-null constraint
+DETAIL:  Failing row contains (3, admin2, $2a$10$WaLjMuhewaIDJyHW8KZSy.47vv6TUTrCQm7f6WA.j858rRr/wjAHa, {"modules": [{"name": "aws"}]}, 2016-05-01 17:22:43.113085, null).
+STATEMENT:  insert into users (username,password,data) values ('admin2','$2a$10$WaLjMuhewaIDJyHW8KZSy.47vv6TUTrCQm7f6WA.j858rRr/wjAHa','{"modules":[{"name":"aws"}]}')
+ERROR:  relation "undefined" does not exist at character 15
+STATEMENT:  select * from undefined where username = 'test'
+ERROR:  relation "undefined" does not exist at character 8
+STATEMENT:  update undefined set last_login = current_timestamp where username = 'test'
+ERROR:  relation "undefined" does not exist at character 13
+STATEMENT:  insert into undefined (username,password,data) values ('test',null,'{"modules":{}}')
+ERROR:  relation "undefined" does not exist at character 13
+STATEMENT:  insert into undefined (username,password,data) values ('test',null,'{"modules":{}}')
+ERROR:  relation "undefined" does not exist at character 15
+STATEMENT:  select * from undefined where username = 'test'
+ERROR:  relation "undefined" does not exist at character 8
+STATEMENT:  update undefined set last_login = current_timestamp where username = 'test'
+ERROR:  relation "undefined" does not exist at character 15
+STATEMENT:  select * from undefined where username = 'test'
+ERROR:  relation "undefined" does not exist at character 8
+STATEMENT:  update undefined set last_login = current_timestamp where username = 'test'
+ERROR:  relation "undefined" does not exist at character 15
+STATEMENT:  select * from undefined where username = 'test'
+ERROR:  relation "undefined" does not exist at character 8
+STATEMENT:  update undefined set last_login = current_timestamp where username = 'test'
+LOG:  received SIGHUP, reloading configuration files
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
