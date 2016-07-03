@@ -8,10 +8,10 @@ const app = require('./../../lib/index');
 describe('Integration tests for /api/expenses', () => {
     function createExpense (date, price, description) {
         return {
-            description: description,
-            category: description,
-            purchaseDate: moment(date).format("YYYY-MM-DD h:mm:ss"),
-            price: price
+            "description": description,
+            "category": description,
+            "purchase_date": moment(date).format("YYYY-MM-DD h:mm:ss"),
+            "price": price
         };
     }
 
@@ -128,7 +128,7 @@ describe('Integration tests for /api/expenses', () => {
             const expense = {
                 "description": "new",
                 "category": "new",
-                "purchaseDate": new Date("2015-10-03"),
+                "purchase_date": new Date("2015-10-03"),
                 "price": "123"
             };
 
