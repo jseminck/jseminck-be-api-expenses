@@ -9,7 +9,7 @@ API for managing expenses
 Sending a GET request to any endpoint without the correct query parameters will return the following response:
 ```js
 {
-"error": "Missing year and/or month query paramters."
+  "error": "Missing year and/or month query paramters."
 }
 ```
 
@@ -127,7 +127,7 @@ Returns an object containing the category names as keys and the amount spent for
 In case of incorrect token you will receive:
 ```js
 {
-"error": "Incorrect key"
+  "error": "Incorrect key"
 }
 ```
 
