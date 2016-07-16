@@ -30,3 +30,4 @@ deploy:
   app: calm-reef-93989
   on:
     repo: jseminck/jseminck-be-api-expenses
+  skip_cleanup: true
