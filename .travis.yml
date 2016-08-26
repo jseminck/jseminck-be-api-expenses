@@ -31,3 +31,6 @@ deploy:
   on:
     repo: jseminck/jseminck-be-api-expenses
   skip_cleanup: true
+before_install:
+- openssl aes-256-cbc -K $encrypted_327b229cb1ab_key -iv $encrypted_327b229cb1ab_iv
+  -in deploy-key.enc -out deploy-key -d
