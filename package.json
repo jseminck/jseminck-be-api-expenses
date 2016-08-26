@@ -38,6 +38,7 @@
     "aws-sdk": "^2.2.47",
     "babel-plugin-transform-runtime": "^6.6.0",
     "babel-polyfill": "^6.7.4",
+    "forever": "^0.15.2",
     "jseminck-be-communication-utils": "git+https://github.com/jseminck/jseminck-be-communication-utils.git",
     "jseminck-be-pg": "git+https://github.com/jseminck/jseminck-be-pg.git",
     "jseminck-be-server": "git+https://github.com/jseminck/jseminck-be-server.git",
