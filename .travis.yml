@@ -23,14 +23,16 @@ script:
 - travis_retry npm run build
 - travis_retry npm run lint
 - travis_retry npm test
-deploy:
-  provider: heroku
-  api_key:
-    secure: j5Woa9I5xsB4hr59VDXFmwSHdxkHR2nWFezMk3BJuAVAI2hPTgyEx1on+f0op8nyplIMIXdxp5JhTRmSCyi3pwI3uL1JC4J7wOWtXPhG3zLpv95MwN3DctJKyOJtGdQe6/cgxxBViJhY4oyK/rdHl4NvQOyADN3KIBRSO1PM/1aCaoy35GCTARymM4J/KrDdiWkfJqg0Y18mUts2vPU0aUvd+F9SqMhDeZJ5MbYMBXqDoAPCwablhO2CVVrdioF82h0MT0RvT0nGpSxM/0akxJkma36SWNKcrwF37KHwxtDNcEpnnjRk9nJMH14tzdvxqFjHyfjQxVJ82aXWBxzdViJNm2leJfoiZGocVPxW4hzuOaAnM2jJyMx9JxyPld3GvdYcmCbv4hiEUeBM2UtRFgI5tn2DcWfYiMWv/fHNrURiBUNFShZZO5FlDUBM26GA3YDDt8rtVPGcbHKo2W0gxgyd+UAHqMZ4TI8L75akXWbLpOCJVOZbhBCS2pZvKvzEzYhw/MYytvHXbq+Zz7OHiYNlRnUWfSQfc2EvmPitnOhBmqttI7PzFUtADlSMciMyJo/RbBVCW/+gxlAPVvAJWlJS46oTmye0DZtMpSyeLLDEkNAeJy/DnL6/UY7jXxiilhrvuQDhF4M3JCkf726CP0NMAyCAfkncB1hCiQiNF7w=
-  app: calm-reef-93989
-  on:
-    repo: jseminck/jseminck-be-api-expenses
-  skip_cleanup: true
+after_success:
+- chmod 600 deploy-key
+- mv deploy-key ~/.ssh/id_rsa
+- rm -rf src/
+- rm -rf node_modules/
+- tar -czf jseminck-be-api-authentication.tgz .
+- scp jseminck-be-api-authentication.tgz deploy@95.85.25.10:/home/apps/
+- scp deploy.sh deploy@95.85.25.10:/home/apps/
+- ssh deploy@95.85.25.10 'chmod +x /home/apps/deploy.sh'
+- ssh deploy@95.85.25.10 'source ~/.bash_profile && cd /home/apps/ && ./deploy.sh'
 before_install:
 - openssl aes-256-cbc -K $encrypted_327b229cb1ab_key -iv $encrypted_327b229cb1ab_iv
   -in deploy-key.enc -out deploy-key -d
