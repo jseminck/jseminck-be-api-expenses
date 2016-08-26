@@ -29,8 +29,8 @@ after_success:
 - mv deploy-key ~/.ssh/id_rsa
 - rm -rf src/
 - rm -rf node_modules/
-- tar -czf jseminck-be-api-authentication.tgz .
-- scp jseminck-be-api-authentication.tgz deploy@95.85.25.10:/home/apps/
+- tar -czf jseminck-be-api-expenses.tgz .
+- scp jseminck-be-api-expenses.tgz deploy@95.85.25.10:/home/apps/
 - scp deploy.sh deploy@95.85.25.10:/home/apps/
 - ssh deploy@95.85.25.10 'chmod +x /home/apps/deploy.sh'
 - ssh deploy@95.85.25.10 'source ~/.bash_profile && cd /home/apps/ && ./deploy.sh'
