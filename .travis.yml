@@ -6,6 +6,7 @@ env:
 services:
 - postgresql
 addons:
+  ssh_known_hosts: 95.85.25.10
   postgresql: '9.4'
   apt:
     sources:
