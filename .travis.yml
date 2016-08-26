@@ -33,7 +33,7 @@ after_success:
 - scp jseminck-be-api-expenses.tgz deploy@95.85.25.10:/home/apps/
 - scp deploy.sh deploy@95.85.25.10:/home/apps/
 - ssh deploy@95.85.25.10 'chmod +x /home/apps/deploy.sh'
-- ssh deploy@95.85.25.10 'source ~/.bash_profile && cd /home/apps/ && ./deploy.sh'
+- ssh deploy@95.85.25.10 'source ~/.bash_profile && cd /home/apps/ && ./deploy.sh jseminck-be-api-expenses'
 before_install:
 - openssl aes-256-cbc -K $encrypted_327b229cb1ab_key -iv $encrypted_327b229cb1ab_iv
   -in deploy-key.enc -out deploy-key -d
