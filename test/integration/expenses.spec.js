@@ -56,6 +56,15 @@ describe('Integration tests for /api/expenses', () => {
                 .end(done);
         });
 
+        it("returns empty array for december", function(done) {
+            supertest(app)
+                .get(`/api/expenses?year=2015&month=12`)
+                .expect((res) => {
+                    expect(res.body.length).to.equal(0);
+                })
+                .end(done);
+        });
+
         it("returns grouped data for september", function(done) {
             supertest(app)
                 .get(`/api/expenses/grouped?year=2015&month=9`)
