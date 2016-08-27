@@ -1,6 +1,6 @@
 [
     {
-        "purchaseDate": "01-01-2016",
+        "purchase_date": "01-01-2016",
         "category": "myCategory",
         "price" : 123.45,
         "description": "my description"
